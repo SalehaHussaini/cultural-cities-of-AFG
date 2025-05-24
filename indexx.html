@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>شهرهای فرهنگی افغانستان</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&family=Noto+Serif:wght@400&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #F5F5DC;
+            color: #333;
+        }
+        header {
+            background: #8B4513;
+            color: #ffffff;
+            text-align: center;
+            padding: 20px 0;
+        }
+        h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+        h2 {
+            font-family: 'Noto Serif', serif;
+            margin: 10px 0;
+            font-size: 1.8em;
+            opacity: 0;
+            animation: fadeIn 1s forwards;
+        }
+        nav {
+            margin: 20px 0;
+        }
+        nav a {
+            margin: 0 15px;
+            color: #DAA520;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        nav a:hover {
+            color: #ffffff;
+        }
+        section {
+            padding: 20px;
+            margin: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            background: #ffffff;
+        }
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        .city-card {
+            background: #DAA520;
+            color: white;
+            padding: 20px;
+            border-radius: 5px;
+            text-align: center;
+            transition: transform 0.3s, background-color 0.3s;
+            position: relative;
+        }
+        .city-card img {
+            width: 100%;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+        .city-card:hover {
+            transform: scale(1.05);
+            background-color: #8B4513;
+        }
+        .featured-city {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            background: #DAA520;
+            color: #ffffff;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .featured-city:hover {
+            background-color: #8B4513;
+        }
+        .form-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 20px;
+        }
+        input, textarea {
+            width: 80%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #8B4513;
+            border-radius: 5px;
+            transition: border-color 0.3s;
+        }
+        input:focus, textarea:focus {
+            border-color: #DAA520;
+        }
+        button {
+            background: #8B4513;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #DAA520;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>شهرهای فرهنگی افغانستان</h1>
+        <nav>
+            <a href="#gallery">گالری شهرها</a>
+            <a href="#city">شهر روز</a>
+            <a href="#submit">ارسال شهر</a>
+        </nav>
+    </header>
+    
+    <section id="intro">
+        <h2>معرفی</h2>
+        <p>افغانستان کشوری با فرهنگ غنی و متنوع است. هر شهر داستان‌های خاص خود را دارد که باید کشف شوند.</p>
+    </section>
+
+    <section id="gallery">
+        <h2>گالری شهرها</h2>
+        <div class="grid-container">
+            <div class="city-card">
+                <img src="kabul.jpg.jpg" alt="کابل">
+                <h3>کابل</h3>
+                <p>کابل، پایتخت کشور و مرکز فرهنگی و اقتصادی.</p>
+            </div>
+            <div class="city-card">
+                <img src="herat.jpg.jpg" alt="هرات">
+                <h3>هرات</h3>
+                <p>هرات به شعر و هنر مشهور است.</p>
+            </div>
+            <div class="city-card">
+                <img src="mazar.jpg.jpg" alt="مزار شریف">
+                <h3>مزار شریف</h3>
+                <p>مزار شریف معروف به آرامگاه علی است.</p>
+            </div>
+            <div class="city-card">
+                <img src="kandahar.jpg.jpg" alt="قندهار">
+                <h3>قندهار</h3>
+                <p>قندهار شهر سنت‌ها و رسوم است.</p>
+            </div>
+            <div class="city-card">
+                <img src="ghazni.jpg.jpg" alt="غزنی">
+                <h3>غزنی</h3>
+                <p>غزنی به تاریخ و میراث فرهنگی شهرت دارد.</p>
+            </div>
+            <div class="city-card">
+                <img src="bayman.jpg.jpg" alt="بامیان">
+                <h3>بامیان</h3>
+                <p>بامیان به مجسمه‌های بودا مشهور است.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="city">
+        <h2>شهر روز</h2>
+        <div class="featured-city">
+            <div>
+                <h3>هرات</h3>
+                <img src="herat-featured.jpg.jpg" alt="هرات بزرگ">
+                <p>غذا: پلوی هرات</p>
+                <p>لباس: پوشاک محلی</p>
+                <p>رویداد: جشنواره‌های فرهنگی</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="submit">
+        <h2>ارسال شهر</h2>
+        <div class="form-container">
+            <input type="text" placeholder="نام شما" required>
+            <input type="text" placeholder="نام شهر" required>
+            <textarea placeholder="جزئیات فرهنگی" rows="4" required></textarea>
+            <button type="submit">ارسال</button>
+        </div>
+    </section>
+
+    <footer>
+        <p>کپی رایت © 2025. همه حقوق محفوظ است.</p>
+    </footer>
+</body>
+</html>
